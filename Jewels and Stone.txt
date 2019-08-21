@@ -1,0 +1,63 @@
+You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+Example 1:
+
+Input: J = "aA", S = "aAAbbbb"
+Output: 3
+Example 2:
+
+Input: J = "z", S = "ZZ"
+Output: 0
+Note:
+
+S and J will consist of letters and have length at most 50.
+The characters in J are distinct.
+
+
+Code:
+Python:
+    def looprun(j, s, count):
+    checker = j.split("")
+    store = s.split("")
+       for i in store:
+           if i in checker:
+              count = count + 1
+     return count
+              
+        
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        #run loop
+        c = 0 # count variable
+        return looprun(J, S, c)
+        
+   Wrong result: code not compile because in python, there is no split(""). Instead, list(J) coverts the issue
+   
+   
+   Correct result:
+     def numJewelsInStones(self, J: str, S: str) -> int:
+        checker = list(J)
+        store  = list(S)
+        count = 0
+        for i in store:
+            if i in checker:
+                count= count + 1
+        return count
+        
+        
+  https://stackoverflow.com/questions/5387208/how-to-convert-a-string-to-a-list-in-python      
+        
+  >>> word = 'abc'
+>>> L = list(word)
+>>> L
+['a', 'b', 'c']
+>>> ''.join(L)
+'abc'
+
+>>> word = 'a,b,c'
+>>> L = word.split(',')
+>>> L
+['a', 'b', 'c']
+>>> ','.join(L)
+'a,b,c'
