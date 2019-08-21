@@ -1,0 +1,38 @@
+#Question: Defanging an IP Address
+#Given a valid (IPv4) IP address, return a defanged version of that IP address.
+
+#A defanged IP address replaces every period "." with "[.]".
+
+
+Input:
+ "1.1.1.0.1"
+ 
+ output:
+ "1[.]1[.]1[.]0[.]1"
+ 
+ First solution:
+ def defangIPaddr(self, address: str) -> str:
+     array = address
+     list=array.split(".")
+     array2 = list.join("[.]")
+     return array2
+     
+ Wrong: cannot use join in list- syntax error
+ 
+ 
+ def defangIPaddr(self, address: str) -> str:
+        string1 = address.split(".")
+        string2 = '[.]'.join(string1)
+        return string2
+ 
+        
+    
+    
+    
+    https://www.geeksforgeeks.org/python-program-split-join-string/
+    def join_string(list_string): 
+  
+    # Join the string based on '-' delimiter 
+    string = '-'.join(list_string) 
+      
+    return string 
