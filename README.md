@@ -13,5 +13,5 @@ Medium Level:
 #4 Add two numbers: https://leetcode.com/problems/add-two-numbers/
 #5 Root to leaf paths sum: https://practice.geeksforgeeks.org/problems/root-to-leaf-paths-sum/1
 #6 City Skyline: https://leetcode.com/problems/max-increase-to-keep-city-skyline/submissions/
-
+#7 Delete node without head: https://practice.geeksforgeeks.org/problems/delete-without-head-pointer/1
 Hard level
